@@ -1,0 +1,8 @@
+#24th Dec 2020
+This directory consists of the following files
+CLASS_add_L1_files_time.pro
+README_CLASS (this file)
+
+The CLASS_add_L1_files_time.pro is an Interactive Data Language (IDL) program 
+provided for the analysis of CLASS L1 files downloaded from PRADAN website 
+(https://pradan.issdc.gov.in)

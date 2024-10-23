@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><Product_Observational xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B00.xsd" xmlns="http://pds.nasa.gov/pds4/pds/v1">
+  <Identification_Area>
+    <logical_identifier>urn:isro:isda:ch2_cho.cla:calibration:class_rmf_v1</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>CLASS Response Matrix File</title>
+    <information_model_version>1.11.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2020-12-23</modification_date>
+        <version_id>1.0</version_id>
+        <description>First version of CLASS Response Matrix File</description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2019-09-12Z</start_date_time>
+      <stop_date_time xs:nil="true" nilReason="inapplicable"/>
+    </Time_Coordinates>
+    <Investigation_Area>
+      <name>Chandrayaan-2</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lid_reference>urn:isro:isda:context:investigation:mission.chandrayaan-2</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <name>Chandrayaan-2</name>
+      <Observing_System_Component>
+        <name>Chandrayaan-2 Orbiter</name>
+        <type>Spacecraft</type>
+        <description>Chandrayaan-2 Orbiter is an Orbiter craft under the Chandrayaan-2 Spacecraft consisting of eight scientific instruments.</description>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>Chandrayaan-2 Large Area Soft x-ray Spectrometer</name>
+        <type>Instrument</type>
+        <description>CLASS is an X ray fluorescence experiment to map the elemental abundances of the major rock forming elements on the lunar surface. The operating energy range 0.5 keV to 20 keV covers the XRF lines from Mg, Al, Si, Ca, Ti and Fe as well as Na, Cr etc which may be detected.  The spatial resolution is 12.5 km x 12.5 km from a 100 km orbit. In order to convert the XRF line flux to abundances, the incident solar spectrum is measured simultaneously with the X ray Solar Monitor (XSM) experiment on Chandrayaan-2 Orbiter.</description>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Moon</name>
+      <type>Satellite</type>
+      <description>Moon is a natural satellite of Earth.</description>
+    </Target_Identification>
+  </Observation_Area>
+  <File_Area_Observational>
+    <File>
+      <file_name>class_rmf_v1.rmf</file_name>
+      <creation_date_time>2020-11-12T16:34:15</creation_date_time>
+      <file_size unit="byte">2917440</file_size>
+      <comment>This file contains the response matrix</comment>
+    </File>
+    <Header>
+      <local_identifier>header_Primary</local_identifier>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">2880</object_length>
+      <parsing_standard_id>FITS 3.0</parsing_standard_id>
+    </Header>
+    <Header>
+      <local_identifier>header_ebounds</local_identifier>
+      <offset unit="byte">2880</offset>
+      <object_length unit="byte">2880</object_length>
+      <parsing_standard_id>FITS 3.0</parsing_standard_id>
+    </Header>
+    <Table_Binary>
+      <local_identifier>data_ebounds</local_identifier>
+      <offset unit="byte">5760</offset>
+      <records>2048</records>
+      <description>The records count is the number of rows in this table</description>
+      <Record_Binary>
+        <fields>3</fields>
+        <groups>0</groups>
+        <record_length unit="byte">10</record_length>
+        <Field_Binary>
+          <name>CHANNEL</name>
+          <field_location unit="byte">1</field_location>
+          <data_type>SignedMSB2</data_type>
+          <field_length unit="byte">2</field_length>
+          <description>Channel number</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>E_MIN</name>
+          <field_location unit="byte">3</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>energy</unit>
+          <description>E_min</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>E_MAX</name>
+          <field_location unit="byte">7</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>energy</unit>
+          <description>E_max</description>
+        </Field_Binary>
+      </Record_Binary>
+    </Table_Binary>
+    <Header>
+      <local_identifier>header_matrix</local_identifier>
+      <offset unit="byte">28800</offset>
+      <object_length unit="byte">2880</object_length>
+      <parsing_standard_id>FITS 3.0</parsing_standard_id>
+    </Header>
+    <Table_Binary>
+      <local_identifier>data_matrix</local_identifier>
+      <offset unit="byte">31680</offset>
+      <records>2048</records>
+      <description>The records count is the number of rows in this table</description>
+      <Record_Binary>
+        <fields>6</fields>
+        <groups>0</groups>
+        <record_length unit="byte">22</record_length>
+        <Field_Binary>
+          <name>ENERGY_LO</name>
+          <field_location unit="byte">1</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>energy</unit>
+          <description>energy_low</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>ENERGY_HI</name>
+          <field_location unit="byte">5</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>energy</unit>
+          <description>energy_high</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>N_GRP</name>
+          <field_location unit="byte">9</field_location>
+          <data_type>SignedMSB2</data_type>
+          <field_length unit="byte">2</field_length>
+          <unit>n_grp</unit>
+          <description>n_grp</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>F_CHAN</name>
+          <field_location unit="byte">11</field_location>
+          <data_type>SignedMSB2</data_type>
+          <field_length unit="byte">2</field_length>
+          <unit>f_chan</unit>
+          <description>f_chan</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>N_CHAN</name>
+          <field_location unit="byte">13</field_location>
+          <data_type>SignedMSB2</data_type>
+          <field_length unit="byte">2</field_length>
+          <unit>n_chan</unit>
+          <description>n_chan</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>MATRIX</name>
+          <field_location unit="byte">15</field_location>
+          <data_type>SignedMSB2</data_type>
+          <field_length unit="byte">2</field_length>
+          <unit>n_grp</unit>
+          <description>n_grp</description>
+        </Field_Binary>
+      </Record_Binary>
+    </Table_Binary>
+  </File_Area_Observational>
+</Product_Observational>

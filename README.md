@@ -1,2 +1,2 @@
 # ISRO-Ideation
-Description of some Ideas for the ISRO ps
+Description of some Ideas for the ISRO PS
